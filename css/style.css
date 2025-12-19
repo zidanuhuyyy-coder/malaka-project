@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f5f2;
+}
+
+header {
+  background-color: #1f6f54;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+header img {
+  width: 60px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+nav {
+  background-color: #145c43;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+}
+
+nav a:hover {
+  background-color: #0e4533;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.card {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.post img {
+  width: 100%;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.username {
+  font-weight: bold;
+  color: #1f6f54;
+}
+
+.like {
+  color: gray;
+  font-size: 14px;
+}
+
+.comment {
+  background-color: #f1f1f1;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+textarea {
+  width: 100%;
+  padding: 6px;
+  margin-top: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  background-color: #1f6f54;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>SantriConnect</title>
+
+<style>
+:root{
+  --bg:#f2f5f2;
+  --card:#ffffff;
+  --primary:#1f6f54;
+  --secondary:#145c43;
+  --text:#222;
+}
+
+#dark:checked ~ *{
+  --bg:#121212;
+  --card:#1e1e1e;
+  --text:#f2f2f2;
+}
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+header{
+  background:var(--primary);
+  color:white;
+  padding:15px;
+  text-align:center;
+}
+
+header img{
+  width:60px;
+  margin-bottom:8px;
+}
+
+nav{
+  background:var(--secondary);
+  display:flex;
+  justify-content:center;
+  position:sticky;
+  top:0;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  padding:12px 18px;
+}
+
+nav a:hover{background:#0e4533}
+
+.container{
+  width:90%;
+  max-width:800px;
+  margin:auto;
+}
+
+.card{
+  background:var(--card);
+  padding:15px;
+  margin:20px 0;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+.post img{
+  width:100%;
+  border-radius:10px;
+  margin:10px 0;
+}
+
+.username{
+  font-weight:bold;
+  color:var(--primary);
+}
+
+.badge{
+  background:#ffcc00;
+  color:black;
+  padding:2px 6px;
+  border-radius:6px;
+  font-size:12px;
+  margin-left:6px;
+}
+
+.like{font-size:14px;color:gray}
+
+.comment{
+  background:#eee;
+  padding:8px;
+  border-radius:8px;
+  margin-top:8px;
+  font-size:14px;
+}
+
+textarea,input{
+  width:100%;
+  padding:8px;
+  margin-top:6px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+.highlight{
+  border:2px solid #ff9800;
+}
+
+.stat{
+  display:flex;
+  justify-content:space-around;
+  text-align:center;
+}
+
+footer{
+  background:var(--primary);
+  color:white;
+  text-align:center;
+  padding:15px;
+  margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<input type="checkbox" id="dark" hidden>
+
+<header>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTARwgEHUdwTkk-340N4mmu2Yn9Xil2Wz14jQ&s">
+  <h1>SantriConnect</h1>
+  <p>Sosial Media Santri Modern</p>
+  <label for="dark" style="cursor:pointer;">🌙 Dark Mode</label>
+</header>
+
+<nav>
+  <a href="#beranda">Beranda</a>
+  <a href="#posting">Posting</a>
+  <a href="#upload">Upload</a>
+  <a href="#profil">Profil</a>
+  <a href="#tentang">Tentang</a>
+</nav>
+
+<!-- BERANDA -->
+<section id="beranda">
+<div class="container">
+  <div class="card">
+    <h3>Selamat Datang 👋</h3>
+    <p>Platform berbagi dakwah, akhlak, dan aktivitas santri.</p>
+  </div>
+</div>
+</section>
+
+<!-- POSTING -->
+<section id="posting">
+<div class="container">
+
+<div class="card post highlight">
+<p class="username">@santri_muda <span class="badge">POPULER</span></p>
+<img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da">
+<p>Menuntut ilmu adalah ibadah yang pahalanya terus mengalir.</p>
+<p class="like">❤️ 54 suka</p>
+<div class="comment">💬 @ahmad: MasyaAllah inspiratif.</div>
+<textarea placeholder="Tulis komentar (simulasi)"></textarea>
+</div>
+
+<div class="card post">
+<p class="username">@santri_muda <span class="badge">SANTRI AKTIF</span></p>
+<img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53">
+<p>Muhadharah melatih mental dan kepercayaan diri.</p>
+<p class="like">❤️ 21 suka</p>
+<div class="comment">💬 @fauzan: Setuju sekali.</div>
+<textarea placeholder="Komentar (simulasi)"></textarea>
+</div>
+
+</div>
+</section>
+
+<!-- UPLOAD -->
+<section id="upload">
+<div class="container">
+<div class="card">
+<h3>➕ Upload Postingan</h3>
+<input type="text" placeholder="Caption">
+<input type="file">
+<input type="text" placeholder="Atau URL Gambar">
+<p><em>*Upload bersifat simulasi (tanpa JavaScript)</em></p>
+</div>
+
+<div class="card post">
+<p class="username">@santri_muda</p>
+<img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238">
+<p>Akhlak adalah mahkota ilmu.</p>
+<p class="like">❤️ 12 suka</p>
+</div>
+</div>
+</section>
+
+<!-- PROFIL -->
+<section id="profil">
+<div class="container">
+<div class="card">
+<h3>@santri_muda</h3>
+<p>Santri SMA | Pecinta Ilmu & Akhlak</p>
+
+<div class="stat">
+<div><b>3</b><br>Posting</div>
+<div><b>120</b><br>Follower</div>
+<div><b>80</b><br>Following</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- TENTANG -->
+<section id="tentang">
+<div class="container">
+<div class="card">
+<p>
+SantriConnect adalah proyek Ujian Informatika SMA Kurikulum Merdeka.
+Website ini dibuat menggunakan HTML dan CSS tanpa JavaScript,
+dengan konsep simulasi sosial media.
+</p>
+</div>
+</div>
+</section>
+
+<footer>
+<p>© 2025 SantriConnect</p>
+</footer>
+
+</body>
+</html>
